@@ -4,14 +4,8 @@
         <div class="row">
 
             <div class="col-md-3">
-                <p class="lead">Shop Name</p>
-                <div class="list-group">
-                    <a href="#" class="list-group-item">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
-                </div>
-            </div>
-
+        <%@include file="./shared/sidebar.jsp" %>
+</div>
             <div class="col-md-9">
 
                 <div class="row carousel-holder">
@@ -28,7 +22,7 @@
                                     <img class="slide-image" src="http://placehold.it/800x300" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                   <img class="slide-image" src="http://placehold.it/800x300" alt="">
                                 </div>
                                 <div class="item">
                                     <img class="slide-image" src="http://placehold.it/800x300" alt="">
