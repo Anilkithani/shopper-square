@@ -25,18 +25,19 @@ pageEncoding="ISO-8859-1"%>
 
 	<script>
 	window.menu='${title}';
-	
-	
+
+	window.contextRoot = '${contextRoot}'
 	</script>
-
-
-    <!-- Bootstrap Core CSS -->
+	<!-- Bootstrap Core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
-    <!-- bootstrap readable -->
-    <link href="${css}/bootstrap readable.css" rel="stylesheet">
+    <!-- bootstrap readable  theme-->
+    <link href="${css}/bootstrap- readable-theme.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+	<!-- bootstrap datatables -->
+    <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
     <link href="${css}/myapp.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -49,15 +50,12 @@ pageEncoding="ISO-8859-1"%>
 </head>
 
 <body>
-	<div class= "wrapper">
-	
-	
-    <!-- Navigation -->
+	<div class= "Wrapper">
+	    <!-- Navigation -->
     <%@include file="./shared/navbar.jsp" %>
+    
     <!-- Page Content -->
     <div class="content">
-    
-    
     
     <!--Loading the home content  -->
     <c:if test = "${userClickHome == true }">
@@ -78,7 +76,13 @@ pageEncoding="ISO-8859-1"%>
 	<c:if test = "${userClickAllProducts == true or userClickcategoryProducts == true }">
        <%@include file="listProducts.jsp"%>
 		</c:if>
-	</div>
+		
+		<!-- Load only when user clicks show product-->
+	<c:if test = "${userClickShowProduct == true}">
+       <%@include file="singleProduct.jsp"%>
+		</c:if>
+		
+		</div>
 		
 		<!-- Footer comes here -->
    <%@include file="./shared/footer.jsp" %>
@@ -90,8 +94,17 @@ pageEncoding="ISO-8859-1"%>
     <!-- Bootstrap Core JavaScript -->
     <script src="${js}/bootstrap.min.js"></script>
 
+	<!-- 	datatable plugin -->
+	    <script src="${js}/jquery.dataTables.js"></script>
+		
+	<!-- 	datatable bootstrap script -->
+	    <script src="${js}/dataTables.bootstrap.js"></script>
+		
+	
 	<!-- Self coded javascript -->
 	    <script src="${js}/myapp.js"></script>
+
+
 	
 </div>
 </body>

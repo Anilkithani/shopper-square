@@ -13,8 +13,8 @@
    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
    
    
-<context:component-scan base-package="net.anil.shoppersquare.controller"/>
-<context:component-scan base-package="net.anil.shopper.backend.daoimpl"/>   
+<context:component-scan base-package="net.anil.shoppersquare"/>
+<context:component-scan base-package="net.anil.shopperbackend"/>   
    
    
    <bean id= "viewResolver"
