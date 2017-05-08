@@ -95,6 +95,9 @@ pageEncoding="ISO-8859-1"%>
     <!-- jQuery -->
     <script src="${js}/jquery.js"></script>
 
+	<!-- jQuery Validator -->
+		<script src="${js}/jquery.validate.js"></script>
+	
     <!-- Bootstrap Core JavaScript -->
     <script src="${js}/bootstrap.min.js"></script>
 
@@ -104,6 +107,8 @@ pageEncoding="ISO-8859-1"%>
 	<!-- 	datatable bootstrap script -->
 	    <script src="${js}/dataTables.bootstrap.js"></script>
 		
+	<!--  Bootbox script -->
+	    <script src="${js}/bootbox.min.js"></script>
 	
 	<!-- Self coded javascript -->
 	    <script src="${js}/myapp.js"></script>
